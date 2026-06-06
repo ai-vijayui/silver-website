@@ -1,0 +1,93 @@
+/* ============================================
+   Brand logos — Silver Group & Silver Infinity
+   ============================================ */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.logo__img {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+}
+
+.hero-nav .logo:hover .logo__img {
+  opacity: 0.88;
+}
+
+.site-footer__project-logo {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 200px;
+  margin: 0 0 14px;
+  object-fit: contain;
+}
+
+/* Silver Infinity logos — crop centered artwork to align with left text */
+.brand-logo-mark {
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.brand-logo-mark--hero {
+  height: clamp(48px, 8vw, 72px);
+  width: clamp(150px, 28vw, 190px);
+  margin: 0 0 1.25rem;
+}
+
+.brand-logo-mark--feature {
+  height: clamp(44px, 6vw, 64px);
+  width: clamp(140px, 26vw, 175px);
+  margin: 2.75rem 0 0;
+}
+
+.brand-logo-mark .project-hero__brand-logo,
+.brand-logo-mark .project-feature__brand-logo {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  margin: 0;
+  object-fit: contain;
+  object-position: left center;
+  transform: translateX(-21%);
+}
+
+.contact-section__cta-logo {
+  display: block;
+  height: 28px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .logo__img {
+    height: 40px;
+    max-width: 120px;
+  }
+
+  .brand-logo-mark--hero {
+    height: 44px;
+    width: clamp(130px, 38vw, 160px);
+  }
+
+  .brand-logo-mark--feature {
+    margin-top: 2rem;
+    height: 40px;
+    width: clamp(120px, 36vw, 150px);
+  }
+
+  .site-footer__project-logo {
+    height: 40px;
+    max-width: 170px;
+  }
+}

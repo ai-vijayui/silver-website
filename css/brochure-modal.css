@@ -1,0 +1,168 @@
+/* ============================================
+   Brochure download gate — contact modal
+   ============================================ */
+
+.brochure-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.brochure-modal.is-open {
+  display: flex;
+}
+
+.brochure-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 20, 30, 0.62);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.brochure-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 520px);
+  max-height: calc(100dvh - 3rem);
+  overflow-y: auto;
+  background: var(--form-bg, #fafaf8);
+  border: 1px solid var(--border);
+  padding: clamp(28px, 4vw, 40px);
+  box-sizing: border-box;
+}
+
+.brochure-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.brochure-modal__close:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.brochure-modal__title {
+  font-family: var(--font-body);
+  font-size: clamp(22px, 2.2vw, 26px);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 2rem 0.5rem 0;
+}
+
+.brochure-modal__sub {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-body);
+  margin: 0 0 1.75rem;
+}
+
+.brochure-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.brochure-modal__field label {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.brochure-modal__field input {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--text-primary);
+  background: var(--bg);
+  border: 1px solid var(--input-border);
+  border-radius: 0;
+  padding: 0 16px;
+  width: 100%;
+  height: 52px;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease;
+}
+
+.brochure-modal__field input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.brochure-modal__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-ui);
+  line-height: var(--lh-body);
+  color: var(--text-body);
+}
+
+.brochure-modal__checkbox input {
+  margin-top: 4px;
+  accent-color: var(--color-accent);
+}
+
+.brochure-modal__error {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #b42318;
+  margin: 0 0 1rem;
+}
+
+.brochure-modal__submit {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  background: var(--dark, #0f0f0f);
+  border: 1px solid var(--dark, #0f0f0f);
+  border-radius: 0;
+  padding: 16px 24px;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.brochure-modal__submit:hover:not(:disabled) {
+  background: #252525;
+  border-color: #252525;
+}
+
+.brochure-modal__submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.brochure-modal__note {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0.75rem 0 0;
+  text-align: center;
+}
+
+body.brochure-modal-open {
+  overflow: hidden;
+}
